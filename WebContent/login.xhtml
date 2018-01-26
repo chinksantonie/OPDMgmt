@@ -8,25 +8,20 @@
 	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
 
 <head>
-
-
   <title>Log-in</title>
-
-
-    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
-
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 </head>
 
 <body>
 
-  <div class="login-card">
-    <h1>Log-in</h1><br></br>
-  <h:form>
-    <h:inputText id="user" value="#{OPDMngBean.username}" p:placeholder="Username"/>
-    <h:inputSecret id="pass" placeholder="Password" value="#{OPDMngBean.password}" p:placeholder="Password"/>
-    <h:commandButton id="submitbtn" class="login login-submit" value="OK" action="#{OPDMngBean.action}"/>
-    </h:form>
-
+<div class="login-card">
+	<h1>Log-in</h1><br></br>
+	
+	<h:form>
+		<h:inputText id="user" value="#{OPDMngBean.username}" p:placeholder="Username"/>
+		<h:inputSecret id="pass" placeholder="Password" value="#{OPDMngBean.password}" p:placeholder="Password"/>
+		<h:commandButton id="submitbtn" class="login login-submit" value="OK" action="#{OPDMngBean.action}"/>
+	</h:form>
 </div>
 
 
