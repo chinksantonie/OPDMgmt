@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+<title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="css/style_reg.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" media="all" />
+</head>
+<body>
+<div class="container">
+			<!-- freshdesignweb top bar -->
+            <div class="freshdesignweb-top">
+                <a href="" target="_blank">Home</a>
+                <span class="right">
+                    <a href="">
+                        <strong>Back to the freshdesignweb Article</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ freshdesignweb top bar -->
+			<h:head>
+				<h1>Register Details</h1>
+            </h:head>       
+      <div  class="form">
+    			<h:form id="contactform"> 
+    			<p class="contact"><label for="fname">First Name</label></p> 
+    			<h:inputText id="fname" name="fname" required="true" tabindex="1" type="text"> </h:inputText>
+    			
+    			<p class="contact"><label for="mname">Middle Name</label></p> 
+    			<h:inputText id="mname" name="mname" tabindex="1" type="text"> </h:inputText>
+    			
+    			<p class="contact"><label for="lname">Last Name</label></p> 
+    			<h:inputText id="lname" name="lname" tabindex="1" type="text"> </h:inputText>
+    			
+    			<p class="contact"><label for="housename">House Name</label></p> 
+    			<h:inputText id="housename" name="housename" required="true"> </h:inputText>
+                
+           		<p class="contact"><label for="street">Street</label></p> 
+    			<h:inputText id="street" name="street" required="true"> </h:inputText>
+    			
+    			<p class="contact"><label for="city">City</label></p> 
+    			<h:inputText id="city" name="city" required="true"> </h:inputText>
+    			
+    			<p class="contact"><label for="pincode">Pincode</label></p> 
+           		<h:inputText id="pincode" name="pincode" type="text"></h:inputText>
+           		
+    			<p class="contact"><label for="phone">Phone No</label></p> 
+           		<h:inputText id="phone" name="phone" type="text"></h:inputText>
+  
+            <select class="select-style gender" name="gender">
+            <option value="select">Gender</option>
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+            <option value="others">Other</option>
+            </select><br/><br/>
+            
+            <select class="select-style gender" name="jobtype">
+            <option value="select">Regd user is..</option>
+            <option value="d">Doctor</option>
+            <option value="r">Receptionist</option>
+            <option value="a">Admin</option>
+            <option value="p">Patient</option>
+            <option value="others">Other</option>
+            </select><br/><br/>
+
+            <h:commandButton class="buttom" name="submit" id="submit" tabindex="5" value="Register now!" type="submit"> 	 </h:commandButton> 	 
+   </h:form> 
+</div>      
+</div>
+
+</body>
+</html>
