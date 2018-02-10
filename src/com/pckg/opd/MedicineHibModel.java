@@ -7,7 +7,7 @@ import org.hibernate.cfg.Configuration;
 
 public class MedicineHibModel 
 {
-	public static void main(String[] args)
+	/*public static void main(String[] args)
 	{
 		SessionFactory factory;
 		Configuration config=new Configuration().configure();
@@ -17,5 +17,5 @@ public class MedicineHibModel
 		Medicine medicine=new Medicine();
 		
 		
-	}
+	}*/
 }

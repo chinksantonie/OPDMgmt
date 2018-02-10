@@ -11,6 +11,10 @@
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
-        <mapping class="com.pckg.opd.Medicine"/>
+        <mapping class="com.pckg.opd.hibernate.Credentials"/>
+        <mapping class="com.pckg.opd.hibernate.EmployeeDetails"/>
+        <mapping class="com.pckg.opd.hibernate.PatientDetails"/>
+        <mapping class="com.pckg.opd.hibernate.PaymentDetails"/>
+        <mapping class="com.pckg.opd.hibernate.Medicine"/>
     </session-factory>
 </hibernate-configuration>
