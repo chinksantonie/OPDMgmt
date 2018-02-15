@@ -50,5 +50,17 @@ public class EmployeeDetailsServiceImpl implements EmployeeDetailsService
 		}
 		return doctors;
 	}
+	
+	@Override
+	public List<String> getDoctorsFullName(String firstname)
+	{
+		List<EmployeeDetails> employeeDetails=employeeDetailsDao.getDoctorLastName(firstname);
+		List<String> doctorsfullname = new ArrayList<>();
+		for (EmployeeDetails employee: employeeDetails)
+		{
+			doctorsfullname.add(employee.getFirst_Name()+" "+ employee.getLast_Name());
+		}
+		return doctorsfullname;
+	}
 
 }

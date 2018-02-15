@@ -45,6 +45,19 @@ public class EmployeeDetailsDaoImpl extends AbstractDao implements EmployeeDetai
 		return employeeType;
 		
 	}
+	@Override
+	public List getDoctorLastName(String firstname)
+	{
+		Criteria criteria=getSession().createCriteria(EmployeeDetails.class,"employeeDetails");
+		criteria.add(Restrictions.eq("first_Name",firstname));
+		List lastName=criteria.list();
+		if(criteria.list().size()==1)
+		{
+			return lastName;
+		}
+		return null;
+		
+	}
 	/*
 	 * 
 	 * OPTION -1

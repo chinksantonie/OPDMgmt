@@ -1,5 +1,7 @@
 package com.pckg.opd.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +14,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.pckg.opd.constants.EmployeeConstants;
 import com.pckg.opd.dao.PatientDetailsDao;
+import com.pckg.opd.dao.PaymentDetailsDao;
 import com.pckg.opd.hibernate.Credentials;
 import com.pckg.opd.hibernate.EmployeeDetails;
 import com.pckg.opd.hibernate.PatientDetails;
+import com.pckg.opd.hibernate.PaymentDetails;
 import com.pckg.opd.service.CredentialsService;
 import com.pckg.opd.service.EmployeeDetailsService;
 import com.pckg.opd.validators.CredentialsValidator;
@@ -32,6 +36,9 @@ public class CredentialsController
 	
 	@Autowired
 	private PatientDetailsDao patientDetailsDao;
+	
+	@Autowired
+	private PaymentDetailsDao paymentDetailsDao;
 	
 	@RequestMapping(value="/login")//,method=RequestMethod.GET)
 	public ModelAndView login()
@@ -67,7 +74,11 @@ public class CredentialsController
 			String displayPage = null;
 			if (EmployeeConstants.DOCTOR.equals(employeeType))
 			{
-				return new ModelAndView("underdevelopment");
+				List <String> doctorfullname=employeeService.getDoctorsFullName(username);
+				System.out.println("doctorfullname"+doctorfullname);
+				List<PaymentDetails> patientId=paymentDetailsDao.getPatient(doctorfullname);
+				//System.out.println("patientId"+patientId.get(0).toString());
+				return new ModelAndView("specificpatients","doctorspatients",new PatientDetails());
 			}
 			else if (EmployeeConstants.RECEPTIONIST.equals(employeeType))
 			{

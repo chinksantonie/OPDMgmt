@@ -84,5 +84,4 @@ public class PatientDetailsDaoImpl extends AbstractDao implements PatientDetails
 		}
 		return null;
 	}
-
 }

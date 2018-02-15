@@ -9,4 +9,5 @@ public interface EmployeeDetailsService
 	public String getEmployeeTypeCredential(String username, String password);
 	public boolean isInserted(EmployeeDetails employeeDetails);
 	public List<String> getDoctors();
+	public List<String> getDoctorsFullName(String firstname);
 }

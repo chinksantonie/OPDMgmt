@@ -10,4 +10,5 @@ public interface EmployeeDetailsDao
 	public boolean setEmployeeDetails(EmployeeDetails employeeDetails);
 	public List<EmployeeDetails> getAll();
 	public List<EmployeeDetails> getAllDoctors();
+	public List<EmployeeDetails> getDoctorLastName(String firstname);
 }
